@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/head4.png" type="image/x-icon">
+    <title>Mani</title>
+    <link  rel="stylesheet" type="text/css" href="/nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/124f860f7e.js" crossorigin="anonymous"></script>.
+</head>
+
+<style>
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root
+{
+    --bg:rgb(13, 20, 27);
+    --gh:#dcb002;
+    --font:rgb(255, 255, 255);
+}
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+body
+{
+    overflow-x: hidden;
+
+    font-family: 'Poppins',sans-serif;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(img/MAIN1.0.jpg);
+    background-color: var(--bg);
+    width: 100%;
+    height: 100%;
+}
+.hidden{
+opacity: 0;
+filter: blur(15px);
+transform: translateX(-100%);
+transition: all 1s;
+}
+.show{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+
+}
+
+   /* navigation part start*/
+.flex
+{
+    display: flex;
+    gap: 2rem;
+}
+
+.logo{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    margin-left: 20px;
+    text-align: center;
+   }
+
+
+
+.primary-header
+{
+align-items: center;
+justify-content: space-between;
+display: flex;
+height: 5rem;
+width: 100%;
+position:fixed;
+transition: 0.5s;
+margin-left: -10px;
+}
+
+.primary-navigation a
+ {
+   position: relative;
+   text-decoration: none;
+   color:rgb(209, 206, 206);
+}
+
+.primary-navigation a::before
+, a::after
+{
+position: absolute;
+content: "";    
+width: 0%;
+height: 3px;
+background-color: var(--gh);
+transition: 0.5s;
+}
+
+.primary-navigation a::after{
+    left: 0;
+    bottom: -5px;
+}
+
+.primary-navigation a::before{
+right: 0;
+top: -5px;
+}
+
+.primary-navigation a:hover{
+    color: var(--font);
+}
+
+.primary-navigation a:hover:after,a:hover::before{
+    width: 100%;
+}
+@media (min-width:815px){
+
+    .sticky
+    {
+        margin-top:-26px;
+        transition: 0.6s;
+        background-color: rgba(9, 9, 9, 0.68);
+        backdrop-filter: blur(10px);
+     }
+}
+
+@media(min-width:814px){
+.mobile-nav-toggle
+   {
+    display: none;
+    }
+   
+}
+
+.primary-navigation{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    
+    margin-right: 2rem;
+    
+    
+}
+ @media(min-width:80rem)and (max-width:90.5rem){
+   .primary-navigation{
+     gap:clamp(.1rem,2vw,1rem);
+    
+          
+      }
+      .mobile-nav-toggle{
+        display: none;
+        }
+        
+        
+ }
+ .primary-header{
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+ }
+
+  
+
+@media (max-width:800px) {
+    
+    .sticky{
+        margin-top:-26px;
+        background-color: rgba(9, 9, 9, 0.775);
+    }
+    .primary-navigation a{
+      display: inline-block;
+    }
+
+.primary-navigation{
+    position: fixed;
+    flex-direction: column;
+    inset: 0 0 0 30%;
+    padding:min(30vh,10rem)2em;
+    gap: 10%;
+    z-index: 1000;
+    background: #3f3f3f3d;
+    backdrop-filter: blur(20px);
+    transform: translateX(100%) ;
+    transition: transform 350ms ease-out;
+    margin-right: -2rem;
+} 
+.primary-navigation[data-visible="true"]{
+    transform: translateX(30%);
+    
+}  
+.mobile-nav-toggle{
+          position: absolute;
+          z-index: 10000; 
+          width:3rem;
+          border:0;
+          aspect-ratio:1;
+
+          top: 2rem;
+          right: 2rem; 
+          background-color: transparent;
+          background-image: url(../img/iconmenu.png);
+          background-repeat: no-repeat;
+          background-size: 1.7rem;
+                 }
+ 
+.mobile-nav-toggle[aria-expanded="true"]
+{
+    background-image:url(../img/211652_close_icon.png);
+} 
+.primary-navigation a:hover{
+    color:rgba(255, 255, 255, 0.847)
+    }  
+
+}
+/* MAIN HEAD PART */
+ .container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 75px;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    /* border: 2px solid red; */
+ }
+ 
+ @media (max-width:800px) 
+{
+    .container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+    .world{
+        font-size: 15px;
+      }
+    .in1{
+        font-size: 30px;
+    }
+   .auto-type{
+    font-size: 30px;
+   }
+    .item1{
+        max-width: 500px;
+    } 
+      
+    .item1{
+        
+        margin-left: 0px;
+        width:400px ;
+    }
+   .item2{
+    display: none;
+   }      
+}
+
+
+
+ .item1{
+    
+    max-width:550px;
+    height: 100%;
+    /* border: 2px solid red; */
+    color:var(--font);
+    
+    padding-right: 20px;
+ }
+ .item2{
+    margin-left: 20px;
+    max-width: 150px;
+    /* border: 2px solid red; */
+    align-items: center;
+    margin-top:-30px;
+
+ }
+ .item3{
+    margin-top:-30px;
+    margin-left: 40px;
+    max-width:350px;
+    height: 100%;
+    /* border: 2px solid red; */
+    padding-bottom: 20px;
+    transition: 1s;
+ }
+ .bio{
+    color:#ffffff;
+    line-height: 30px;
+    font-weight:bold;
+    text-size-adjust: auto;
+}
+
+
+ .world{
+    color:var(--font);
+  }
+  .h1{
+    color:var(--font);
+  }
+ 
+  .in1{
+    font-size: 45px;
+    color:var(--font);
+     }
+
+     .dn li
+     {
+      color:var(--font);
+      font-size: 50px;
+      list-style: none;
+      font-weight: 500px;
+      position: relative;
+      margin-left: -35px;
+        } 
+    
+
+
+     
+.media{
+    margin-top: 40px;
+    margin-inline: auto;
+    margin-left: 30px;
+}
+.sm1
+{
+    text-decoration: none;
+  height: 150px;
+  width: 50px;
+  margin: 10px 10px;
+  box-shadow:0 4px 8px 0 rgba(8, 0, 0, 0.19) ,0 6px 10px 0 var(--font);
+  display: inline-block;
+ border-radius : 10px 0 20px 0 ;
+  color:var(--font);
+  text-align: center;
+  font-size: 40px;
+border: 2px ;
+background-color: rgba(240, 248, 255, 0.348);
+margin-inline: auto;
+padding-top: 10px;
+padding-bottom: 10px;
+transition: 0.8s;
+ transform: scale(1);
+ transform: rotate(30deg);
+ border: 2px solid var(--gh);
+  }
+
+  .sm1:hover{
+    transform: scale(1.01);
+   transform: rotate(30deg);
+   
+  }
+ #a1{
+text-decoration: none;
+color: var(--font);
+transition: 0.8s;
+ transform: scale(1);
+ }      
+
+ #a2{
+    text-decoration: none;
+    color: var(--font);
+    transform: scale(.8);
+    transition: 2s;
+    margin-top:-10px;
+}  
+ #a3{
+    text-decoration: none;
+    color: var(--font);
+    transform: scale(.8);
+    transition: 2s;
+    
+}  
+ #a4{
+    text-decoration: none;
+    color: var(--font);
+    transform: scale(.8);
+    transition: 2s;
+    
+}  
+#a1:hover{
+    transform: scale(1.2);
+   
+    transition:0.5s; 
+    color: rgb(5, 59, 158);
+}
+#a2:hover{
+    transform: scale(1.2);
+    transition:0.5s; 
+    color: rgb(27, 26, 26);
+}
+#a3:hover{
+    transform: scale(1.2);
+    transition:0.5s; 
+    background: linear-gradient(
+        to left, #f24c8c, #f163aa,
+         #f63585, #f3518f);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+#a4:hover{
+    transform: scale(1.2);;
+
+    transition:0.5s; 
+    color: rgb(0, 89, 255);
+}
+
+
+
+
+.features
+{
+border:2px solid rgba(21, 21, 21, 0.313);
+width: 100%;
+height:100%;
+background-color: rgba(0, 0, 0, 0.777);
+backdrop-filter: blur(10px);
+
+margin-left: -5px;
+margin-top: 0px;
+}
+
+.features h2{
+    margin-top:100px;
+    margin-left: 50px;
+}
+.ftr{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 70px;
+    padding-right: 70px;
+    margin-inline: center;;
+}
+.fer{
+    margin-top: 20px;
+    width: 370px;
+    height: 300px;
+    transition: 1s;
+    border-radius: 20px;
+    margin-inline: auto;
+    transform: scale(1);
+    box-shadow: 0 4px 8px 0 rgba(8, 0, 0, 0.19), 0 6px 20px 0 #525151;
+    margin-bottom: 20px;
+}
+.fer:hover{
+  
+    border-radius: 20px;
+    transition: 1s;
+    
+    background-color: rgba(84, 84, 84, 0.67);
+    transform: translateY(-10%);
+    box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.3);
+}
+.popup-screen{
+    z-index: 999999;
+    position: fixed;
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    transition: 0.5s ease;
+    transition-property: visibility;
+  }
+  
+  .popup-screen.active{
+    visibility: visible;
+  }
+  
+  .popup-box{
+    position: relative;
+   
+    background-repeat: no-repeat;
+    background-size: 400px ;
+    backdrop-filter: blur(10px);
+    width:400px;
+    height:220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    padding: 50px 100px;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.098);
+    transform: scale(0);
+    transition: 0.5s ease;
+    transition-property: transform;
+    
+
+  }
+  
+  .popup-screen.active .popup-box{
+    transform: scale(1);
+  }
+  
+  .popup-box h2{
+    font-size: 2.1em;
+    font-weight: 800;
+    margin-bottom: 20px;
+  }
+  
+  .popup-box p{
+    font-size: 1em;
+    margin-bottom: 30px;
+  }
+  
+  
+  
+  
+  
+  @media (max-width:765px){
+    .popup-box{
+      width: 200px;
+      height: 180px;
+      background-size: 200px ;
+    }
+  
+  }
+  
+/* resume part */
+  .resume{
+    width: 90%;
+    height:450px;
+    position: relative;
+    margin: 20px auto;
+  margin-inline: auto;
+  }
+  .btn-box{
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+  .btn-box button{
+    background-color: transparent;
+    border: none;
+    outline:none;
+    cursor: pointer;
+    padding: 14px 16px;
+    margin-right: 50px;
+    font-size: 20px;
+    color: white;
+  }
+  
+.btn-box i{
+    margin-right: 20px;
+}
+.btn-box button:hover i{ 
+ color: var(--gh);
+}
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin:5% auto;
+    position: absolute;
+    transform: translateX(1000%);
+    transition: 0.3s;
+    background-color: #ffcc00;
+    border-radius: 20px;
+    box-shadow:0 4px 8px 0 rgba(255, 255, 255, 0.19) ,0 6px 20px 0 rgb(255, 255, 255);
+    height: 100%;
+    width: 100%;    
+}
+.content-left{
+  width: 50%;
+
+  height: 100%;
+  align-items: center;
+  padding-top: 30px;
+  padding-left: 20px;
+  
+}
+.content-left  > h2{
+
+ align-items: center;
+}
+.content-left > ul{
+  background-color: rgb(223, 224, 225);
+  border-radius: 20px;
+  box-shadow:0 4px 8px 0 rgba(255, 255, 255, 0.19) ,0 6px 20px 0 rgb(89, 89, 89);
+}
+.content-right{
+  max-width: 30%;
+  height: 100%;
+}
+.content-right > img{
+  width:450px;
+  height: 400px;
+  transition: 1s;
+ 
+ animation: myimg 10s infinite;
+}
+@keyframes myimg {
+  25%
+  {
+   transform: translateY(0deg);
+   
+  }
+ 
+  100%
+   {
+    transform: rotateY(350deg);
+    
+  }
+}
+
+
+
+@media screen and (max-width:750px) {
+  .content-right{
+    display: none;
+  }
+  .content-left{
+    width: 100%;
+  }
+  
+}
+
+
+#content1{
+transform: translateX(0%);
+}
+.content-left{
+ position: relative;
+ 
+}
+#btn1{
+    color: var(--gh);
+    
+    border-top:5px solid var(--gh) ;
+    border-bottom:1px solid  rgba(132, 132, 132, 0.413) ;
+    background-color: #8b88883a;
+    border-radius: 20px;
+    margin-top: 10px;
+    
+   
+}
+#btn3,#btn4,#btn2 {
+  margin-top:10px;
+  border-radius: 20px;
+  border-bottom:1px solid rgba(132, 132, 132, 0.413) ;
+ 
+  
+}
+
+.im1{
+  height: 120px;
+  width: 120px;
+  display: inline-block;
+  transition: 2s;
+   border-radius: 50%;
+   
+   border:0.01px solid var(--gh);
+   } 
+   .progress{
+    width: 100%;
+    display: flex;
+     margin-bottom: 10px;
+     
+   }
+   label{
+    color: #ffffff;
+    font-weight: bold;
+   }
+   .progress-bar{
+    border-radius: 30px;
+    border-right: 10px solid rgb(255, 191, 0);
+    animation: prog 10s infinite;
+    transition: 1s;
+   }
+   @keyframes prog {
+    25%
+    {
+      width: 0%;
+    }
+    50%
+     {
+      
+    }
+    75%
+     {
+      width: 25%;
+    }
+    100%
+     {
+      top:20px;
+    }
+  }
+
+  .content-left >img{
+    width: 350px;
+    height: 400px;
+  }
+  section{
+    margin-bottom: 50px;
+  }
+.contactus{
+  display:flex;
+  flex-wrap: wrap;
+  margin: 0px;
+  padding: 10px auto ;
+  width: 100%;
+  height: 100%;
+
+}
+.resume1 img{
+  width: 250px;
+ display: flex;
+}
+.cv{
+ background-color: aqua;
+ color: #525151;
+ width: 300px;
+ height: 50px;
+ padding-top: 10px;
+ text-align: center;
+ border-radius: 20px;
+ transition: 1s;
+}
+.cv:hover{
+  background-color: aquamarine;
+  color: black;
+  border-radius: 0px;
+  transition: 1s;
+}
+
+@media screen and (max-width:800px) {
+ 
+
+  .cv{
+    margin-top: -255px;
+   
+    position: relative;
+  }
+#contact{
+  margin-top: 100px;
+}
+}
+.inform{
+  width: 450px;
+  height: 100%;
+  margin: 10px auto;
+  padding: 20px auto;
+ 
+ display: flex;
+ justify-content: center;
+
+}
+.inform ul li {
+  color: var(--font);
+  width:100%;
+  padding: 20px ;
+  background-color: #52515192;
+  border:1px solid rgb(139, 139, 139);
+  list-style: none;
+  text-align: center;
+  margin-top: 20px;
+border-top-right-radius:40px  ;
+border-top-left-radius:40px  ;
+border-top: 2px solid var(--gh);
+border-bottom-left-radius:20px ;
+border-bottom-right-radius:20px ;
+font-weight: bold;
+}
+
+.form{
+  width: 450px;
+  height: 100%;
+  margin: 10px auto;
+  padding: 30px ;
+  align-items: center;
+  justify-content: center;
+}
+.form input{
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--gh);
+  border-radius: 10px;
+}
+#submit{
+  background-color: #dcb002;
+  width: 50%;
+  text-align: center;
+  color: var(--font);
+  border-top: 5px solid var(--font);
+  border-radius: 50px;
+  transition: 1s;
+}
+#submit:hover{
+  border: 0px ;
+  transition: 1s;
+  border-radius: 0px;
+}
+.form textarea{
+  width: 100%;
+  border-radius: 10px;
+}
+
+.about{
+  display:flex;
+  flex-wrap: wrap;
+  margin: 0px;
+  padding: 10px auto ;
+  width: 100%;
+  height: 100%;
+
+}
+
+.image{
+  width: 350px;
+  height: 100%;
+  margin: 10px auto;
+  padding: 20px auto;
+ 
+ display: flex;
+ justify-content: center;
+}
+.aboutus{
+  width: 550px;
+  height: 100%;
+  margin: 10px auto;
+  padding: 30px ;
+  align-items: center;
+  justify-content: center;
+  color: var(--font);
+}
+.aboutus ul li{
+  color: var(--font);
+  width:100%;
+  padding: 20px ;
+  background-color: #52515192;
+  border:1px solid rgb(139, 139, 139);
+  list-style: none;
+  text-align: center;
+  margin-top: 20px;
+border-top-right-radius:40px  ;
+border-top-left-radius:40px  ;
+border-top: 2px solid var(--gh);
+border-bottom-left-radius:20px ;
+border-bottom-right-radius:20px ;
+}
+
+
+   footer{
+   
+    background-color: #26262663;
+  
+    height: 300px;
+    align-items: center;
+    padding-top: 60px;
+   }
+
+
+
+   
+
+</style>
+<body style="background-color: black;">
+<!-- 
+    <span id="home"></span>
+    <div class="popup-screen">
+        <div class="popup-box">
+          <img  style="width:100%;height:100%; border-radius: 20px;" src="img/HELLO-unscreen.gif"">
+          
+        </div>
+      </div>
+      
+     
+  
+      <script type="text/javascript">
+      const popupScreen = document.querySelector(".popup-screen");
+      const popupBox = document.querySelector(".popup-box");
+      
+  
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          popupScreen.classList.add("active");
+        }, 2000); 
+      });
+  
+      function popup() {
+        popupScreen.classList.remove("active"); 
+        
+      }
+      setInterval(popup, 7500);
+      
+      
+      </script> -->
+  
+        <header class="primary-header flex" >
+            <div style="display:flex ; justify-items: baseline;">
+                <img class="logo" src="img/por2.jpg" alt="imagelogo">
+                
+                <font style="font-size:2rem ; color:white;line-height: 25px; margin-top: 12px; ">
+                <font style="  color:#dcb002; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: bold;" class="logo">M</font>ani 
+                 <br>&nbsp; <b style="font-size: 0.8rem;color: white;"> Web Developer & Professional Coder </b>   </font>
+                
+                 
+            </div>
+            <button class="mobile-nav-toggle" area-control="primary-navigation" aria-expanded="false">
+               <span class="sr-only"><i class="fa-solid fa-bars"></i></span>
+            </button>
+            
+        <nav>
+            <ul  id="primary-navigation" data-visible="false" class="primary-navigation flex">
+                <li class="active">
+                    <a  class="nav-link"   href="">
+                        <span aria-hidden="true"></span>Home
+                    </a>
+                </li>
+                <li class="active">
+                    <a class="nav-link" href="#features1">
+                        <span aria-hidden="true"></span>Features
+                    </a>
+                </li>
+              
+                <li class="active">
+                    <a class="nav-link" href=" #Resume">
+                        <span aria-hidden="true"></span>Resume
+                    </a>
+                </li>
+                <li class="active" >
+                  <a class="nav-link"   href="#about">
+                      <span aria-hidden="true">   </span>About
+                  </a>
+              </li> 
+                <li class="active" >
+                    <a class="nav-link"   href="#contact">
+                        <span aria-hidden="true">   </span>Contact
+                    </a>
+                </li>         
+               
+            </ul>
+        </nav>
+    </header>
+    <script>
+        window.addEventListener("scroll",function(){
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky",this.window.scrollY > 0);
+        })
+    </script>
+    
+    <!--main front head -->
+    <section class="container" > 
+<div class="item1 hidden">
+    
+    <p class="world"><b> WELCOME TO MY WORLD</b></p>
+    <p class="in1" ><b>Hi, I’m </b>
+
+    <font style="color:#cc8a06; "><b>Mani</b></font></p>
+    <div class="auto">
+     <ul class="dn">
+   <li><b><span class="auto-type" style="color: #f9f9b4;"></span></b></li></ul></div>
+ <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+   <script>
+
+   var typed = new Typed(".auto-type",{
+     strings : ["a Developer.","a Professional  Coder."],
+     typeSpeed : 35,
+     backSpeed : 35,
+     loop: true
+     })
+</script>
+ <br>
+     
+    <p  class="bio" >I use animation as a third dimension by which to simplify  experiences and kuiding thro each and every interaction. I’m not motion just to spruce things up, but doing it in ways that.</p>
+     
+</div>
+<div class="item2 hidden">
+    
+        
+        <div class="media" style="z-index: 3;">
+            <div class="sm1" >
+            <a  href="https://www.linkedin.com/in/manpreet-singh-ab1b49220/" id="a1" ><i class="fa-brands fa-linkedin"></i> </a><br><br>
+            <a  href="https://github.com/manpreetkhandwal" id="a2" ><i class="fa-brands fa-github"></i> </a>
+        </div><br><br>
+        <div class="sm1" >
+            <a href="https://www.instagram.com/manpreet.m.a.n.i/" id="a3" ><i class="fa-brands fa-instagram"></i></a><br><br>
+            <a href="https://www.facebook.com/profile.php?id=100029248328927" id="a4"> <i class="fa-brands fa-facebook"></i></a>
+        </div>
+        </div>
+
+     
+</div>
+<div class="item3 hidden">
+    <img class="mainp" src="img/mainhead.png">
+</div>
+ </section>
+<section class="features hidden" id="features1">
+<h2 class="hidden" style ="color:#ffffff">
+Features
+</h2>
+<h1 class="hidden" style="color:rgb(202, 234, 246); font-size:60px; margin-left:60px; margin-left: 50px;"><b>What I Do</b></h1>
+    <div class="ftr">
+    <div class="fer hidden">
+      <i class="fa-solid fa-bars"  style="color:#dcb002; font-size: 40px; text-align: center;  margin-left: 40px; margin-top:40px;"></i><br><br>
+    <h4 style="color:white; margin-left: 40px;">Business Stratagy</h4><br>
+    <p style="color:aliceblue; margin-left: 40px; "> I throw myself down among the tall<br> grass by the stream as I
+      lie close to<br> the earth.</p>  
+  </div>
+   <div class="fer hidden">
+    <i class="fa-regular fa-book-open" style="color:#dcb002; font-size: 40px; margin-left: 40px; margin-top:40px;"></i><br><br>
+    <h4 style="color:white; margin-left: 40px;">App Development</h4><br>
+    <p style="color:aliceblue; margin-left: 40px; "> It uses a dictionary of over 200 <br>Latin words, combined with
+      a handful of<br> model sentence.</p>  
+  </div>
+   <div class="fer hidden" >
+    <i class="fa-solid fa-tv"  style="color:#dcb002; font-size: 40px; margin-left: 40px; margin-top:40px;"></i><br><br>
+    <h4 style="color:white; margin-left: 40px;">App Development</h4><br>
+    <p style="color:aliceblue; margin-left: 40px; "> I throw myself down among the tall<br> grass by the stream as I
+      lie close to<br> the earth.</p>  
+  </div>
+  <div class="fer hidden">
+    <i class="fa-solid fa-sms"  style="color:#dcb002; font-size: 40px; margin-left: 40px; margin-top:40px;"></i><br><br>
+    <h4 style="color:white; margin-left: 40px;">Mobile App</h4><br>
+    <p style="color:aliceblue; margin-left: 40px; "> I throw myself down among the tall<br> grass by the stream as I
+      lie close to<br> the earth.</p>  
+  </div>
+   
+   <div class="fer hidden"> 
+    <i class="fa-solid fa-wifi"  style="color:#dcb002; font-size: 40px; margin-left: 40px; margin-top:40px;"></i><br><br>
+    <h4 style="color:white; margin-left: 40px;">CEO Marketing</h4><br>
+    <p style="color:aliceblue; margin-left: 40px; "> I throw myself down among the tall<br> grass by the stream as I
+      lie close to<br> the earth.</p>
+   </div>
+   <div class="fer hidden">
+    <i class="fa-solid fa-blog"  style="color:#dcb002; font-size: 40px; margin-left: 40px; margin-top:40px;"></i><br><br>
+    <h4 style="color:white; margin-left: 40px;"> personal portofolio</h4><br>
+    <p style="color:aliceblue; margin-left: 40px; "> I throw myself down among the tall<br> grass by the stream as I
+      lie close to<br> the earth.</p>  
+  </div>
+</div>
+</section>
+
+
+<span id ="Resume"></span>
+<br><br><br>
+   <!-- my resume part  -->
+   <hr style="color:white;"> 
+   <h1 class="hidden" style="color:rgb(202, 234, 246); font-size:60px; text-align: center;"><b>My Resume</b></h1>
+    
+<section class="resume hidden" >
+<div class="btn-box">
+    <button class="hidden" id="btn1" onclick="openEducation()"><i class="fa-solid fa-user-graduate fa-bounce"></i>Education</button>
+    <button class="hidden" id="btn2" onclick="openResume()"><i class="fa-light fa-id-badge fa-bounce"></i>Resume</button>
+    <button class="hidden" id="btn3" onclick="openPro()"><i class="fa-solid fa-user-tie fa-bounce"></i>Professional Skills</button>
+    <button class="hidden" id="btn4" onclick="openEx()"><i class="fa-light fa-id-card-clip fa-bounce"></i>Experiences</button>
+
+</div>
+<div id="content1" class="content">
+    <div class="content-left">
+      <h2><i class="fa-solid fa-user-graduate fa-bounce"></i>Bachelor's in computer application</h2>
+      
+        <ul>
+         <li><b>Institute</b>:Punjabi Univerity Patiala</li>
+         <li><b>Year:</b>2019-22</li>
+         <li><b>Result:</b>75%</li>
+
+        </ul>
+        <h2><i class="fa-sharp fa-light fa-laptop-code fa-beat-fade"></i>Deploma in computer application</h2>
+      
+        <ul>
+         <li><b>Institute</b>:ATG Patran</li>
+         <li><b>Year:</b>2017-19</li>
+         <li><b>Result:</b>A</li>
+
+        </ul>
+        <h2><i class="fa-light fa-book-sparkles fa-beat"></i>12th</h2>
+      
+        <ul>
+         <li><b>Institute</b>:Punjab School Education Board</li>
+         <li><b>Year:</b>2016-17</li>
+         <li><b>Result:</b>65%</li>
+
+        </ul>
+      
+    </div>
+    <div class="content-right">
+      <img src="img/head2.png">
+    </div>
+</div>
+<div id="content2" class="content">
+    <div class="content-left">
+    
+      <img src="img/1.png" alt="">
+    </div>
+    <div class="content-right1">
+     <a  style="text-decoration: none;" href="img/front-end.pdf" download>
+      <div  class="cv">
+        <h3>CV Download </h3>
+      </div>
+     </a>
+    </div>
+   
+</div>
+<div id="content3" class="content">
+    <div class="content-left">
+
+        <label>html/css</label><div class="progress">
+            <div class="progress-bar bg-dark" role="progressbar"  style="width:90%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <label>javascript</label>
+          <div class="progress">
+            <div class="progress-bar bg-dark" role="progressbar" style="width: 55%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <label>bootstrap</label>
+          <div class="progress">
+            <div class="progress-bar bg-dark" role="progressbar" style="width: 80%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <label>Python</label>
+          <div class="progress">
+            <div class="progress-bar bg-dark" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <label>django</label>
+          <div class="progress">
+            <div class="progress-bar bg-dark" role="progressbar" style="width: 70%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <label>VScode</label>
+          <div class="progress">
+            <div class="progress-bar bg-dark" role="progressbar" style="width: 90%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <label>Pycharm</label>
+          <div class="progress">
+            <div class="progress-bar bg-dark" role="progressbar" style="width: 80%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          
+          <label>git/github</label>
+          <div class="progress">
+            <div class="progress-bar bg-dark" role="progressbar" style="width: 50%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+    </div>
+    
+
+</div>
+<div id="content4" class="content">
+    <div class="content-left">
+
+    </div>
+    <div class="content-right">
+
+    </div>
+</div>
+</section>
+<script>
+   //MyResume part//
+
+   var content1 = document.getElementById("content1");
+   var content2 = document.getElementById("content2");
+   var content3 = document.getElementById("content3");
+   var content4 = document.getElementById("content4");
+   var btn1 = document.getElementById("btn1");
+   var btn2 = document.getElementById("btn2");
+   var btn3 = document.getElementById("btn3");
+   var btn4 = document.getElementById("btn4");
+
+   function openEducation(){
+ content1.style.transform = "translateX(0%)";
+ content2.style.transform = "translateX(1000%)";
+ content3.style.transform = "translateX(1000%)";
+ content4.style.transform = "translateX(1000%)";
+
+ btn1.style.color="#dcb002";
+ btn2.style.color="white";
+ btn3.style.color="white";
+ btn4.style.color="white";
+
+ btn1.style.borderTop = "thick solid #dcb002";
+ btn2.style.borderTop = "0px solid #0000FF";
+ btn3.style.borderTop = "0px solid #0000FF";
+ btn4.style.borderTop = "0px solid #0000FF";
+
+ btn1.style.backgroundColor = "#8b88883a";
+ btn2.style.backgroundColor = "black";
+ btn3.style.backgroundColor = "black";
+ btn4.style.backgroundColor = "black";
+ 
+ content1.style.transitionDelay="0.3s";
+ content2.style.transitionDelay="0s";
+ content3.style.transitionDelay="0s";
+ content4.style.transitionDelay="0s";
+   }
+
+   function openResume(){
+    content1.style.transform = "translateX(1000%)";
+    content2.style.transform = "translateX(0%)";
+    content3.style.transform = "translateX(1000%)";
+    content4.style.transform = "translateX(1000%)";
+
+    btn2.style.color="#dcb002";
+    btn1.style.color="white";
+    btn3.style.color="white";
+    btn4.style.color="white";
+
+    btn1.style.borderTop = "0px solid #0000FF";
+ btn2.style.borderTop = "thick solid #dcb002";
+ btn3.style.borderTop = "0px solid #0000FF";
+ btn4.style.borderTop = "0px solid #0000FF";
+
+ btn1.style.backgroundColor = "black";
+ btn2.style.backgroundColor = "#8b88883a ";
+ btn3.style.backgroundColor = "black ";
+ btn4.style.backgroundColor = "black ";
+
+    content1.style.transitionDelay="0s";
+    content2.style.transitionDelay="0.3s";
+    content3.style.transitionDelay="0s";
+    content4.style.transitionDelay="0s";
+    
+   }
+   function openPro(){
+    content1.style.transform = "translateX(1000%)";
+    content2.style.transform = "translateX(1000%)";
+    content3.style.transform = "translateX(0%)";
+    content4.style.transform = "translateX(1000%)";
+
+    btn3.style.color="#dcb002";
+    btn2.style.color="white";
+    btn1.style.color="white";
+    btn4.style.color="white";
+
+    btn1.style.borderTop = " 0px solid #0000FF";
+ btn2.style.borderTop = "0px solid #0000FF";
+ btn3.style.borderTop = "thick solid #dcb002";
+ btn4.style.borderTop = "0px solid #0000FF";
+
+ btn1.style.backgroundColor = "black";
+ btn3.style.backgroundColor = "#8b88883a ";
+ btn2.style.backgroundColor = "black";
+ btn4.style.backgroundColor = "black";
+ 
+    content1.style.transitionDelay="0s";
+    content2.style.transitionDelay="0s";
+    content3.style.transitionDelay="0.3s";
+    content4.style.transitionDelay="0s";
+    
+   }
+   function openEx(){
+    content1.style.transform = "translateX(1000%)";
+    content2.style.transform = "translateX(1000%)";
+    content3.style.transform = "translateX(1000%)";
+    content4.style.transform = "translateX(0%)";
+
+    btn4.style.color="#dcb002";
+    btn2.style.color="white";
+    btn3.style.color="white";
+    btn1.style.color="white";
+
+    btn1.style.borderTop = " 0px solid #0000FF";
+ btn2.style.borderTop = "0px solid #0000FF";
+ btn3.style.borderTop = "0px solid #0000FF";
+ btn4.style.borderTop = "thick solid #dcb002";
+
+ btn1.style.backgroundColor ="black";
+ btn4.style.backgroundColor = "#8b88883a ";
+ btn3.style.backgroundColor = "black";
+ btn2.style.backgroundColor = "black";
+
+    content1.style.transitionDelay="0s";
+    content2.style.transitionDelay="0s";
+    content3.style.transitionDelay="0s";
+    content4.style.transitionDelay="0.3s";
+    
+   }
+
+
+
+</script>
+<br>
+<br><br><br><br>
+<span id ="contact"></span><br>
+<br>
+<hr  id="contact" style="color:white;"> 
+
+
+  <h1 class="hidden" id="contact" style="color:rgb(202, 234, 246); font-size:60px; text-align: center;"><b>Contact</b></h1>
+<section class="contactus" >
+<div class="inform hidden">
+ <ul>
+  <li class="hidden"><i style="margin-right: 10px;" class="fa-solid fa-phone fa-flip"></i>+919814220380</li>
+  <li class="hidden"><i style="margin-right: 10px;" class="fa-sharp fa-solid fa-envelope fa-beat"></i>manpreetmomian@gmail.com</li>
+  <li class="hidden"><i style="margin-right: 10px;" class="fa-sharp fa-solid fa-location-dot fa-bounce"></i>NCR , Delhi</li>
+ </ul>
+</div>
+<div class="form hidden">
+  <center>
+    <form class="hidden" method="POST" action="https://script.google.com/macros/s/AKfycbwwy9WUMsmt2R7Z1Sz6rCrfT39OTuE7XfTYgFelNYOoV_67nXKg18tIhUA0XSTotb1F/exec">
+  <input class="hidden" type="text" placeholder="Name" required>
+  <input class="hidden" type="email" placeholder="Email" required>
+  <input class="hidden" type="text" placeholder="subject" required>
+  <textarea class="hidden" rows="5" placeholder="message" required></textarea>
+  <br>
+  <input  class="hidden" id="submit" type="submit" value="Submit" >
+</form>
+</center>
+</div>
+</section>
+<span id ="about"></span><br>
+<br>
+<hr   style="color:white;"> 
+
+
+  <h1 class="hidden" id="contact" style="color:rgb(202, 234, 246); font-size:60px; text-align: center;"><b>About Me</b></h1>
+
+<section class="about" >
+  <div class="image hidden" >
+    <img src="img/head3.png">
+  </div>
+  <div class="aboutus hidden">
+   <ul>
+    <p>Solution-driven web developer is adept at contributing to highly collaborative
+      work environments and finding solutions. Proven experience developing
+      consumer-focused websites using HTML, CSS, JavaScript, Bootstrap. Good knowledge of the best practices for web design, user
+      experience, and speed..</p>
+    <li><b>Name: </b>Manpreet Singh </li>
+    <li><b>Date of birth :</b> 22/12/1998</li>
+    <li><b>Address</b>:NCR , Delhi </li>
+    <li><b>Email:</b>manpreetmomian@gmail.com</li>
+    <li><b>Mobile :</b>+919814220380</li>
+   </ul>
+  </div>
+
+</section>
+
+<footer>
+    <div class="container1 hidden" style="color:rgb(180, 184, 186); text-align: center;"> 
+      <img class="im1 hidden" src="img/head4.png"><br>
+      <font  class="hidden" style="font-family:Trattatello, fantasy; color:#ffd000;font-size: 40px;">Mani</font>
+      <p  class="hidden" style="font-size:20px;">&#169; 2022.All rights reserved by <b style="text-shadow: 1px 1px 2px black, 0 0 25px rgb(255, 238, 0), 0 0 5px rgb(22, 22, 226);">
+        <font color="orange"><i class="fa-brands fa-free-code-camp"></i></font>
+        Codemani.
+       </p>
+       
+       
+    </div>
+    </footer>
+    
+<script>
+// navbar part  start //
+ 
+    const primaryNav = document.querySelector(".primary-navigation");
+    const navToggle = document.querySelector (".mobile-nav-toggle");
+    navToggle.addEventListener("click", () => {
+
+    const visibility = primaryNav.getAttribute("data-visible");
+  
+    if(visibility === "false"){
+         primaryNav.setAttribute("data-visible",true);
+         navToggle.setAttribute("aria-expanded",true);
+       }
+   else if(visibility === "true")
+    {
+        primaryNav.setAttribute('data-visible',false);
+        navToggle.setAttribute("aria-expanded",false);
+    }
+   });
+
+   //navbar part end//
+
+//scroll animation//
+const observer = new IntersectionObserver((entries) => {
+     entries.forEach((entry) => {
+      console.log(entry)
+      if (entry.isIntersecting){
+           entry.target.classList.add('show');
+      }
+      else{
+        entry.target.classList.remove('show');
+      }
+     });
+
+});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((e1) => observer.observe(e1));
+
+</script>
+</body>
+</html>
